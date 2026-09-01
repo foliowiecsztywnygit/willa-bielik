@@ -10,7 +10,7 @@ const Contact = () => {
     const checkin = searchParams.get('checkin');
     const checkout = searchParams.get('checkout');
     if (checkin && checkout) {
-      setMessage(`Dzień dobry, potrzebuję noclegu w Osadzie Dzianisz N°54 pomiędzy ${checkin} a ${checkout}. Czy mają Państwo wolny termin?`);
+      setMessage(`Dzień dobry, potrzebuję noclegu w Willi Bielik pomiędzy ${checkin} a ${checkout}. Czy mają Państwo wolny termin?`);
     }
   }, [searchParams]);
 
@@ -39,9 +39,9 @@ const Contact = () => {
               <div>
                 <h3 className="font-bold text-foreground text-lg">Adres</h3>
                 <p className="text-gray-600 font-light mt-1">
-                  Osada Dzianisz N°54<br/>
-                  ul. Kurierów Tatrzańskich 47<br/>
-                  34-514 Dzianisz
+                  Willa Bielik<br/>
+                  ul. Sarnia 5<br/>
+                  58-540 Karpacz
                 </p>
               </div>
             </div>
@@ -52,7 +52,7 @@ const Contact = () => {
               </div>
               <div>
                 <h3 className="font-bold text-foreground text-lg">Telefon</h3>
-                <p className="text-gray-600 font-light mt-1 text-xl">+48 503 142 398</p>
+                <p className="text-gray-600 font-light mt-1 text-xl">731 139 539</p>
               </div>
             </div>
           </div>

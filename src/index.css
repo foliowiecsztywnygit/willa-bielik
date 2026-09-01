@@ -3,10 +3,10 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-background: #F3EFE9;
-  --color-foreground: #2A2A2A;
-  --color-accent: #CFA055;
-  --color-footer: #222222;
+  --color-background: #FCFCFB;
+  --color-foreground: #111111;
+  --color-accent: #B88A44;
+  --color-footer: #0A0A0A;
   --font-sans: "Montserrat", sans-serif;
   --font-serif: "Playfair Display", serif;
 }
@@ -45,4 +45,16 @@ button {
 /* Invert filter for the logo to make it goldish white */
 .logo-filter {
   filter: invert(75%) sepia(21%) saturate(983%) hue-rotate(352deg) brightness(88%) contrast(85%);
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+  animation: scroll 40s linear infinite;
+}
+.animate-scroll:hover {
+  animation-play-state: paused;
 }

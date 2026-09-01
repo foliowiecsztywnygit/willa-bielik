@@ -8,18 +8,14 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center md:text-left">
           
           <div className="col-span-1 md:col-span-2">
-            <img 
-              src="/assets/images/logo.png" 
-              alt="Osada Dzianisz N°54" 
-              className="h-40 w-auto mb-6 mx-auto md:mx-0 opacity-90 logo-filter transform scale-150 origin-center md:origin-left object-contain" 
-            />
+            <div className="text-3xl font-serif text-accent mb-6 mx-auto md:mx-0 font-bold">Willa Bielik</div>
             <p className="text-gray-600 text-sm font-light leading-loose max-w-sm mx-auto md:mx-0">
-              ul. Kurierów Tatrzańskich 47<br />
-              34-514 Dzianisz
+              ul. Sarnia 5<br />
+              58-540 Karpacz
             </p>
             <div className="mt-6 space-y-2 text-sm">
-              <p className="text-accent font-medium"><span className="text-foreground mr-2">📱</span>+48 503 142 398</p>
-              <p className="text-accent font-medium"><span className="text-foreground mr-2">✉</span>domkidzianisz@wp.pl</p>
+              <p className="text-accent font-medium"><span className="text-foreground mr-2">📱</span>731 139 539</p>
+              <p className="text-accent font-medium"><span className="text-foreground mr-2">✉</span>wilk570@gmail.com</p>
             </div>
           </div>
 
@@ -27,7 +23,7 @@ const Footer = () => {
             <h4 className="text-sm font-serif mb-6 text-foreground">Na skróty</h4>
             <ul className="space-y-3 text-sm text-gray-600">
               <li><Link to="/" className="hover:text-accent transition-colors">Strona Główna</Link></li>
-              <li><Link to="/domki" className="hover:text-accent transition-colors">Domki Wakacyjne</Link></li>
+              <li><Link to="/pokoje" className="hover:text-accent transition-colors">Pokoje</Link></li>
               <li><Link to="/o-nas" className="hover:text-accent transition-colors">O nas</Link></li>
               <li><Link to="/galeria" className="hover:text-accent transition-colors">Galeria</Link></li>
             </ul>

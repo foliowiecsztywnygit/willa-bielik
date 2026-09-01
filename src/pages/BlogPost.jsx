@@ -26,7 +26,7 @@ const BlogPost = () => {
   return (
     <div className="min-h-screen bg-background pt-24 pb-16">
       <Helmet>
-        <title>{post.title} | Osada Dzianisz N54</title>
+        <title>{post.title} | Willa Bielik</title>
         <meta name="description" content={post.description} />
       </Helmet>
 

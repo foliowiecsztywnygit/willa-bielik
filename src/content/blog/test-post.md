@@ -15,4 +15,4 @@ Cieszymy się, że możemy podzielić się z Wami naszymi aktualnościami. W naj
 
 ## Co nowego?
 
-Z przyjemnością ogłaszamy, że nasze domki zyskały nowe wyposażenie. Dbamy o to, aby Wasz wypoczynek był na najwyższym poziomie! Zapraszamy do czytania i śledzenia nowości!
+Z przyjemnością ogłaszamy, że nasze pokoje zyskały nowe wyposażenie. Dbamy o to, aby Wasz wypoczynek był na najwyższym poziomie! Zapraszamy do czytania i śledzenia nowości!

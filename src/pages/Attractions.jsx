@@ -6,7 +6,7 @@ const Attractions = () => {
     <div>
       <Hero 
         title="Atrakcje w Okolicy" 
-        subtitle="Odkrywaj uroki Podhala" 
+        subtitle="Odkrywaj uroki Karpacza i Karkonoszy" 
         isHome={false} 
       />
 
@@ -14,16 +14,16 @@ const Attractions = () => {
         <div className="flex-1 text-center lg:text-left">
           <h2 className="text-4xl font-serif text-foreground mb-6">Doskonała Baza Wypadowa</h2>
           <p className="text-gray-600 mb-6 font-light leading-relaxed">
-            Osada Dzianisz N°54 to nie tylko komfortowy nocleg, to przede wszystkim brama do najpiękniejszych miejsc na Podhalu. Znajdujemy się w urokliwej, zacisznej okolicy z dala od miejskiego gwaru, jednak wciąż blisko kluczowych punktów turystycznych.
+            Willa Bielik to nie tylko komfortowy nocleg, to przede wszystkim brama do najpiękniejszych miejsc w Karkonoszach. Znajdujemy się w urokliwej, zacisznej okolicy przy lesie, jednak wciąż blisko kluczowych punktów turystycznych.
           </p>
           <p className="text-gray-600 font-light leading-relaxed">
-            Latem zapraszamy na piesze wycieczki szlakami Tatrzańskiego Parku Narodowego oraz rowerowe wyprawy. Zimą okolica zamienia się w raj dla miłośników narciarstwa (zarówno zjazdowego jak i biegowego). 
+            Latem zapraszamy na piesze wycieczki szlakami Karkonoskiego Parku Narodowego oraz rowerowe wyprawy. Zimą okolica zamienia się w raj dla miłośników narciarstwa i sportów zimowych.
           </p>
         </div>
         <div className="flex-1 w-full h-[500px] relative">
           <img 
-            src="/assets/images/zewnatrz-dron-3.webp" 
-            alt="Osada z lotu ptaka" 
+            src="/assets/691655-9.jpg" 
+            alt="Widok na góry" 
             className="w-full h-full object-cover shadow-2xl"
           />
         </div>
@@ -31,41 +31,70 @@ const Attractions = () => {
 
       <section className="py-24 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          
+          <h2 className="text-3xl font-serif text-foreground mb-12 text-center">W pobliżu</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="p-6 border border-gray-100 rounded-lg hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg mb-2">Skarby Ziemi Juna</h3>
+              <p className="text-accent text-sm font-bold uppercase tracking-widest mb-2">450 m</p>
+              <p className="text-gray-600 text-sm">Wystawa minerałów z całego świata.</p>
+            </div>
             
-            <div className="text-center group">
-              <div className="relative h-64 overflow-hidden mb-6 rounded-t-full">
-                <img src="/assets/images/zewnatrz-zima-wieczor-1.webp" alt="Narty" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-              </div>
-              <h3 className="text-2xl font-serif text-foreground mb-4">Stacja Narciarska<br/>Witów Ski</h3>
-              <p className="text-accent text-sm font-bold uppercase tracking-widest mb-4">Zaledwie 2 km od domków</p>
-              <p className="text-gray-600 font-light">
-                Raj dla narciarzy. Świetnie przygotowane stoki dla początkujących i zaawansowanych, zaledwie 3 minuty jazdy samochodem.
-              </p>
+            <div className="p-6 border border-gray-100 rounded-lg hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg mb-2">Stacja kolejki Stok Relaks</h3>
+              <p className="text-accent text-sm font-bold uppercase tracking-widest mb-2">Bardzo blisko</p>
+              <p className="text-gray-600 text-sm">Idealne dla narciarzy i spacerowiczów.</p>
             </div>
-
-            <div className="text-center group mt-12 md:mt-0">
-              <div className="relative h-64 overflow-hidden mb-6 rounded-t-full">
-                <img src="/assets/images/zewnatrz-zima-wieczor-2.webp" alt="Termy" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-              </div>
-              <h3 className="text-2xl font-serif text-foreground mb-4">Termy<br/>Chochołowskie</h3>
-              <p className="text-accent text-sm font-bold uppercase tracking-widest mb-4">Zaledwie 2 km od domków</p>
-              <p className="text-gray-600 font-light">
-                Największe termy na Podhalu. Idealne miejsce na relaks po dniu spędzonym na stoku lub górskich szlakach. Gorące źródła z widokiem na góry.
-              </p>
+            
+            <div className="p-6 border border-gray-100 rounded-lg hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg mb-2">Restauracja Albero</h3>
+              <p className="text-accent text-sm font-bold uppercase tracking-widest mb-2">&lt; 1 km</p>
+              <p className="text-gray-600 text-sm">Pyszne lokalne jedzenie i nie tylko.</p>
             </div>
-
-            <div className="text-center group">
-              <div className="relative h-64 overflow-hidden mb-6 rounded-t-full">
-                <img src="/assets/images/zewnatrz-dron-7.webp" alt="Gubałówka" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
-              </div>
-              <h3 className="text-2xl font-serif text-foreground mb-4">Gubałówka<br/>i Zakopane</h3>
-              <p className="text-accent text-sm font-bold uppercase tracking-widest mb-4">Gubałówka 10km | Zakopane 9km</p>
-              <p className="text-gray-600 font-light">
-                Słynny deptak Krupówki, kultowa kolejka na Gubałówkę i bogata baza gastronomiczna Zakopanego są na wyciągnięcie ręki.
-              </p>
+            
+            <div className="p-6 border border-gray-100 rounded-lg hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg mb-2">Muzeum Sportu i Turystyki</h3>
+              <p className="text-accent text-sm font-bold uppercase tracking-widest mb-2">1,1 km</p>
+              <p className="text-gray-600 text-sm">Poznaj historię regionu i sportów zimowych.</p>
             </div>
-
+            
+            <div className="p-6 border border-gray-100 rounded-lg hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg mb-2">Skocznia narciarska Orlinek</h3>
+              <p className="text-accent text-sm font-bold uppercase tracking-widest mb-2">1,3 km</p>
+              <p className="text-gray-600 text-sm">Jeden z symboli Karpacza, obecnie centrum sportów ekstremalnych.</p>
+            </div>
+            
+            <div className="p-6 border border-gray-100 rounded-lg hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg mb-2">Kolejka linowa na Kopę</h3>
+              <p className="text-accent text-sm font-bold uppercase tracking-widest mb-2">2 km</p>
+              <p className="text-gray-600 text-sm">Szybki sposób na dostanie się pod Śnieżkę i podziwianie Karkonoszy z góry.</p>
+            </div>
+            
+            <div className="p-6 border border-gray-100 rounded-lg hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg mb-2">Wang Church</h3>
+              <p className="text-accent text-sm font-bold uppercase tracking-widest mb-2">3,2 km</p>
+              <p className="text-gray-600 text-sm">Drewniany kościółek norweski, prawdziwa perełka architektoniczna.</p>
+            </div>
+            
+            <div className="p-6 border border-gray-100 rounded-lg hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg mb-2">Centrum Karpacza</h3>
+              <p className="text-accent text-sm font-bold uppercase tracking-widest mb-2">18 min pieszo</p>
+              <p className="text-gray-600 text-sm">Deptak, pamiątki i wiele atrakcji tuż obok.</p>
+            </div>
+            
+            <div className="p-6 border border-gray-100 rounded-lg hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-lg mb-2">Inne Atrakcje</h3>
+              <ul className="text-gray-600 text-sm space-y-1">
+                <li>• Wyciąg narciarski Kolorowa (1,3 km)</li>
+                <li>• Tor Saneczkowy (1,3 km)</li>
+                <li>• Lodowisko syntetyczne (2,1 km)</li>
+                <li>• Wyciąg narciarski Euro (2,3 km)</li>
+                <li>• Muzeum Zabawek (2,4 km)</li>
+                <li>• Western City (3,2 km)</li>
+              </ul>
+            </div>
+            
           </div>
         </div>
       </section>

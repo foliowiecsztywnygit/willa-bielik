@@ -1,13 +1,35 @@
-import matter from 'gray-matter';
+function parseFrontmatter(markdown) {
+  const match = markdown.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n([\s\S]*)$/);
+  if (!match) return { data: {}, content: markdown };
+
+  const frontmatterString = match[1];
+  const content = match[2];
+
+  const data = {};
+  frontmatterString.split(/\r?\n/).forEach(line => {
+    const colonIndex = line.indexOf(':');
+    if (colonIndex > -1) {
+      const key = line.slice(0, colonIndex).trim();
+      let value = line.slice(colonIndex + 1).trim();
+      if (value.startsWith('"') && value.endsWith('"')) {
+        value = value.slice(1, -1);
+      } else if (value.startsWith("'") && value.endsWith("'")) {
+        value = value.slice(1, -1);
+      }
+      data[key] = value;
+    }
+  });
+
+  return { data, content };
+}
 
 // Pobierz wszystkie pliki markdown z folderu blog
 const mdFiles = import.meta.glob('../content/blog/*.md', { query: '?raw', eager: true });
 
 export function getAllPosts() {
   const posts = Object.entries(mdFiles).map(([path, file]) => {
-    // Vite import.meta.glob z query '?raw' w Vite 4/5/6 zwraca obiekt z { default: string }
     const rawContent = file.default || file;
-    const { data, content } = matter(rawContent);
+    const { data, content } = parseFrontmatter(rawContent);
 
     return {
       title: data.title || 'Brak tytułu',

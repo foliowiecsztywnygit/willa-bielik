@@ -1,4 +1,4 @@
-require('dotenv').config();
+require('dotenv').config({ path: require('path').resolve(__dirname, '.env') });
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -111,10 +111,10 @@ const resend = process.env.RESEND_API_KEY ? new Resend(process.env.RESEND_API_KE
 
 // --- Public Form Submission ---
 app.post('/api/inquiries', (req, res) => {
-    const { cabin_id, start_date, end_date, guest_name, guest_email, guest_phone, message } = req.body;
+    const { cabin_id, start_date, end_date, guest_name, guest_email, guest_phone, message, pets, breakfast, dinner, total_price } = req.body;
     
-    const stmt = db.prepare(`INSERT INTO inquiries (cabin_id, start_date, end_date, guest_name, guest_email, guest_phone, message) VALUES (?, ?, ?, ?, ?, ?, ?)`);
-    stmt.run([cabin_id, start_date, end_date, guest_name, guest_email, guest_phone, message], async function(err) {
+    const stmt = db.prepare(`INSERT INTO inquiries (cabin_id, start_date, end_date, guest_name, guest_email, guest_phone, message, pets, breakfast, dinner, total_price) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)`);
+    stmt.run([cabin_id, start_date, end_date, guest_name, guest_email, guest_phone, message, pets ? 1 : 0, breakfast ? 1 : 0, dinner ? 1 : 0, total_price], async function(err) {
         if (err) return res.status(500).json({ error: err.message });
         
         // Mock notification via SMS/WhatsApp alternative
@@ -123,8 +123,8 @@ app.post('/api/inquiries', (req, res) => {
         // --- RESEND EMAIL INTEGRATION (Prepared for desktop inquiries) ---
         // try {
         //   await resend.emails.send({
-        //     from: 'rezerwacje@osadadzianisz.pl',
-        //     to: 'wlascicielka@osadadzianisz.pl',
+        //     from: 'rezerwacje@willabielik.pl',
+        //     to: 'kontakt@willabielik.pl',
         //     subject: `Nowe zapytanie o rezerwację - ${guest_name}`,
         //     html: `<p><strong>Imię:</strong> ${guest_name}</p><p><strong>Telefon:</strong> ${guest_phone}</p><p><strong>Email:</strong> ${guest_email}</p><p><strong>Termin:</strong> ${start_date} do ${end_date}</p><p><strong>Wiadomość:</strong> ${message}</p>`
         //   });

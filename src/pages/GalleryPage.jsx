@@ -7,31 +7,21 @@ const GalleryPage = () => {
   const [lightboxIndex, setLightboxIndex] = useState(0);
 
   const images = [
-    // Zewnątrz - Dron
-    ...Array.from({ length: 7 }, (_, i) => ({
-      src: `/assets/images/zewnatrz-dron-${i + 1}.webp`,
-      category: 'zewnatrz',
-      alt: `Widok z drona ${i + 1}`
-    })),
-    // Z zewnątrz zima/wieczór
-    ...Array.from({ length: 11 }, (_, i) => ({
-      src: `/assets/images/zewnatrz-zima-wieczor-${i + 1}.webp`,
-      category: 'zima',
-      alt: `Zima i wieczór ${i + 1}`
-    })),
-    // Nowe zdjęcia Domek I
-    ...Array.from({ length: 4 }, (_, i) => ({
-      src: `/assets/images/dom1-${i + 1}.jpg`,
-      category: 'wnetrza',
-      alt: `Domek 1 - Nowe zdjęcie ${i + 1}`
-    })),
-    // Wnętrza
-    ...Array.from({ length: 36 }, (_, i) => ({
-      src: `/assets/images/wnetrze-${i + 1}.webp`,
-      category: 'wnetrza',
-      alt: `Wnętrze domku ${i + 1}`
-    }))
-  ];
+    '/assets/12552-willa_bielik-625836.jpg', '/assets/12552-willa_bielik-625837.jpg',
+    '/assets/12552-willa_bielik-625838.jpg', '/assets/12552-willa_bielik-625839.jpg',
+    '/assets/12552-willa_bielik-625840.jpg', '/assets/12552-willa_bielik-625841.jpg',
+    '/assets/12552-willa_bielik-625842.jpg', '/assets/12552-willa_bielik-625844.jpg',
+    '/assets/12552-willa_bielik-656160.jpg', '/assets/12552-willa_bielik-656161.jpg',
+    '/assets/12552-willa_bielik-656162.jpg', '/assets/12552-willa_bielik-656163.jpg',
+    '/assets/12552-willa_bielik-656164.jpg', '/assets/12552-willa_bielik-656165.jpg',
+    '/assets/12552-willa_bielik-656166.jpg', '/assets/12552-willa_bielik-656167.jpg',
+    '/assets/12552-willa_bielik-656168.jpg', '/assets/12552-willa_bielik-656169.jpg',
+    '/assets/12552-willa_bielik-656172.jpg', '/assets/12552-willa_bielik-656173.jpg',
+    '/assets/12552-willa_bielik-656176.jpg', '/assets/12552-willa_bielik-656177.jpg',
+    '/assets/12552-willa_bielik-656180.jpg', '/assets/691649-3.jpg', '/assets/691650-4.jpg',
+    '/assets/691651-5.jpg', '/assets/691652-6.jpg', '/assets/691653-7.jpg', '/assets/691654-8.jpg',
+    '/assets/691655-9.jpg', '/assets/691656-10.jpg', '/assets/691657-11.jpg'
+  ].map((src, index) => ({ src, category: 'wszystkie', alt: `Willa Bielik ${index + 1}` }));
 
   const filteredImages = filter === 'wszystkie' ? images : images.filter(img => img.category === filter);
 
@@ -58,7 +48,7 @@ const GalleryPage = () => {
     <div>
       <Hero 
         title="Galeria" 
-        subtitle="Odkryj Osadę Dzianisz N°54 na zdjęciach" 
+        subtitle="Odkryj Willę Bielik na zdjęciach" 
         isHome={false} 
       />
 

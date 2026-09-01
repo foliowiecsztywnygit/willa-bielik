@@ -10,15 +10,15 @@ const BlogList = () => {
   return (
     <div className="min-h-screen bg-background pt-24 pb-12">
       <Helmet>
-        <title>Blog - Aktualności i Wpisy | Osada Dzianisz N54</title>
-        <meta name="description" content="Przeczytaj najnowsze wpisy, aktualności i artykuły dotyczące naszej osady oraz lokalnych atrakcji." />
+        <title>Blog - Aktualności i Wpisy | Willa Bielik</title>
+        <meta name="description" content="Przeczytaj najnowsze wpisy, aktualności i artykuły dotyczące naszej willi oraz lokalnych atrakcji." />
       </Helmet>
 
       <div className="container mx-auto px-4 max-w-5xl">
         <div className="text-center mb-16">
           <h1 className="text-4xl md:text-5xl font-serif text-foreground mb-4">Nasz Blog</h1>
           <p className="text-gray-600 max-w-2xl mx-auto">
-            Odkryj ciekawostki o naszej okolicy, nowości w osadzie i porady dotyczące idealnego wypoczynku w górach.
+            Odkryj ciekawostki o naszej okolicy, nowości w willi i porady dotyczące idealnego wypoczynku w górach.
           </p>
         </div>
 

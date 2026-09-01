@@ -15,7 +15,7 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { name: 'Domki', path: '/domki' },
+    { name: 'Pokoje', path: '/pokoje' },
     { name: 'O nas', path: '/o-nas' },
     { name: 'Galeria', path: '/galeria' },
     { name: 'Atrakcje', path: '/atrakcje' },
@@ -30,12 +30,8 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           
           {/* Logo */}
-          <Link to="/" className="flex-shrink-0">
-            <img 
-              src="/assets/images/logo.png" 
-              alt="Osada Dzianisz N°54" 
-              className="h-28 md:h-36 w-auto object-contain transform scale-150 origin-left logo-filter" 
-            />
+          <Link to="/" className="flex-shrink-0 flex items-center">
+            <span className="text-2xl font-serif text-accent tracking-widest font-bold">Willa Bielik</span>
           </Link>
           
           {/* Desktop Menu */}
@@ -54,7 +50,7 @@ const Navbar = () => {
           {/* CTA */}
           <div className="hidden md:flex items-center">
             <Link 
-              to="/domki" 
+              to="/pokoje" 
               className="border border-white/60 text-white px-8 py-2.5 text-xs font-semibold tracking-widest hover:border-accent hover:text-accent transition-colors duration-300"
             >
               REZERWUJ

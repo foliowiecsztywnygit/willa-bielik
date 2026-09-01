@@ -25,9 +25,11 @@ const db = new sqlite3.Database(dbPath, (err) => {
             db.get("SELECT COUNT(*) AS count FROM cabins", (err, row) => {
                 if (row && row.count === 0) {
                     const stmt = db.prepare("INSERT INTO cabins (name) VALUES (?)");
-                    stmt.run("Domek 1");
-                    stmt.run("Domek 2");
-                    stmt.run("Domek 3");
+                    stmt.run("Pokój z łóżkiem King-Size");
+                    stmt.run("Pokój trzyosobowy");
+                    stmt.run("Pokój trzyosobowy typu Basic");
+                    stmt.run("Pokój czteroosobowy");
+                    stmt.run("Pokój pięcioosobowy");
                     stmt.finalize();
                 }
             });
@@ -43,7 +45,6 @@ const db = new sqlite3.Database(dbPath, (err) => {
                 FOREIGN KEY(cabin_id) REFERENCES cabins(id)
             )`);
 
-            // Inquiries table (optional, but good for saving requests)
             db.run(`CREATE TABLE IF NOT EXISTS inquiries (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
                 cabin_id INTEGER,
@@ -53,6 +54,10 @@ const db = new sqlite3.Database(dbPath, (err) => {
                 guest_email TEXT,
                 guest_phone TEXT,
                 message TEXT,
+                pets BOOLEAN DEFAULT 0,
+                breakfast BOOLEAN DEFAULT 0,
+                dinner BOOLEAN DEFAULT 0,
+                total_price REAL,
                 status TEXT DEFAULT 'pending', -- 'pending', 'confirmed', 'rejected'
                 created_at DATETIME DEFAULT CURRENT_TIMESTAMP
             )`);
