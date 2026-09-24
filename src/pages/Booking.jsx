@@ -282,7 +282,7 @@ const BookingPage = () => {
                      Jesteś na smartfonie? Najszybsza rezerwacja odbywa się przez SMS.
                    </p>
                    <a 
-                     href={`sms:+48503142398?body=${encodeURIComponent(`Dzień dobry, chciał(a)bym zarezerwować pokój w terminie od ${displayDate(startParam)} do ${displayDate(endParam)} dla ${guestsParam} osób. Czy termin jest nadal aktualny?`)}`}
+                     href={`sms:+48731139539?body=${encodeURIComponent(`Dzień dobry, chciał(a)bym zarezerwować pokój w terminie od ${displayDate(startParam)} do ${displayDate(endParam)} dla ${guestsParam} osób. Czy termin jest nadal aktualny?`)}`}
                      className={`w-full flex items-center justify-center gap-3 bg-green-500 hover:bg-green-600 text-white font-bold py-4 rounded-lg transition-colors text-sm uppercase tracking-widest ${!selectedCabin ? 'opacity-50 pointer-events-none' : ''}`}
                    >
                      Wyślij SMS z zapytaniem
